@@ -1,0 +1,41 @@
+import os
+
+os.system("date") # gets the current date
+os.getcwd() # gets the path of the current working directory
+
+# check the existence of the path and create a directory called abcd there
+
+path = 'C99/abc'
+isExist = os.path.exists(path)
+print(isExist)
+os.mkdir(path+'/'+"abcd")     
+
+# using splitext function 
+# used to split the path name into a pair root(folder name) and ext(folder extension).
+Here, ext stands for extension and has the extension portion of the specified path while 
+root is everything except ext part. It return a tuple data type of python. 
+
+Tuple is same as lists but it cannot be modified and it uses Parentheses instead of brackets
+eg:- ("file" , ".txt") #
+
+path1 = 'C99/test/testing.txt'
+root_ext = os.path.splitext(path1)
+print(root_ext) # OUTPUT ('C99/test/testing', '.txt')
+
+# gets the list of directories
+os.listdir()
+['C100', 'C97', 'C98', 'C99'] # output
+
+
+
+######## SHUTIL MODULE FUNCTIONS ###########
+import os
+import shutil
+path1 = 'C99/abc'
+os.listdir(path1)      ['abcd', 'commands.txt', 'newFolder'] ## OUTPUT
+
+# moving a directory
+
+source = 'C99/abc'
+dest = 'C100'
+destination = shutil.move(source,dest)
